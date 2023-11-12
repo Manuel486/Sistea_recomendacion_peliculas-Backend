@@ -1,0 +1,27 @@
+# Archivos generados por el sistema operativo
+.DS_Store
+
+# Carpeta de dependencias (por ejemplo, virtual environment)
+venv/
+data/
+
+# Variables de entorno
+.env
+*.pyc
+__pycache__/
+
+
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivo del sistema upload
+upload.ipynb
+
+# Archivo de espacio de trabajo de Visual Studio Code
+.sistemaderecomendacion-backend.code-workspace
+
+# Archivos temporales
+*.log
+*.tmp

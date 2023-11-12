@@ -19,6 +19,7 @@ class MovieRecommender:
         userSubset = self.ratings_df[
             self.ratings_df["movieId"].isin(inputMovies["movieId"].tolist())
         ]
+
         return inputMovies, userSubset
 
     def calculate_correlation(self, inputMovies, userSubset):
@@ -68,9 +69,11 @@ class MovieRecommender:
 
         # Obtener usuarios similares y calcular recomendaciones
         topUsers = pearsonDF.sort_values(by="similarityIndex", ascending=False)[0:50]
+
         topUsersRating = topUsers.merge(
             self.ratings_df, left_on="userId", right_on="userId", how="inner"
         )
+
         topUsersRating["weightedRating"] = (
             topUsersRating["similarityIndex"] * topUsersRating["rating"]
         )

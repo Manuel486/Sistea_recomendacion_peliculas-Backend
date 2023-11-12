@@ -9,7 +9,7 @@ from models.LinkModel import LinkModel
 main = Blueprint("link_blueprint", __name__)
 
 
-@main.route("/")
+@main.route("/", methods=["GET"])
 def get_links():
     try:
         links = LinkModel.get_links()
