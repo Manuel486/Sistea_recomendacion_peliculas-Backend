@@ -17,7 +17,7 @@ __pycache__/
 *.tmp
 
 # Archivo del sistema upload
-upload.ipynb
+upload_data.ipynb
 
 # Archivo de espacio de trabajo de Visual Studio Code
 .sistemaderecomendacion-backend.code-workspace
